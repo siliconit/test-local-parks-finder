@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryFont: 'Work Sans', sans-serif;
+  --white: #fff;
+  --grayLite: #cfcfcf;
+  --red: #E74646;
+  --creamLite: #FFF3E2;
+  --danger:#c00;
+}
+
+html,
+body {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--primaryFont);
+  font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  position: relative;
+  z-index: 0;
+  width: 100svw;
+  height: 100svh;
+}
+
+.main .floatBox {
+  width: 70%;
+  max-width: 400px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--creamLite);
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.main .floatBox .title {
+  font-size: 2rem;
+  font-family: 700;
+  margin-bottom: 10px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+.inputGroup .inputText{
+  padding: 10px 15px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  background-color: var(--white);
+  border: 1px solid var(--grayLite);
+  border-radius: 5px 0  0 5px;
+  width: 100%;
+}
+.inputGroup .submitBtn{
+  padding: 10px 20px;
+  margin-left: -1px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--white);
+  background-color:  var(--red);
+  border: 1px solid var(--red);
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  white-space: nowrap;
+  width: 100%;
+  max-width: 100px;
+}
+.inputGroup .submitBtn:hover,
+.inputGroup .submitBtn:focus,
+.inputGroup .submitBtn:active{
+  filter: brightness(90%);
+}
+
+.main #map {
+  width: 100svw;
+  height: 100svh;
+  position: relative;
+  z-index: 0;
+}
+
+
+.markerPopup a.leaflet-popup-close-button {
+  background-color: var(--danger);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 20px;
+  width: 15px;
+  height: 15px;
+  top: -5px;
+  right: -5px;
+}
+.markerPopup .leaflet-popup-tip-container .leaflet-popup-tip,
+.markerPopup .leaflet-popup-content-wrapper{
+  background-color: var(--creamLite);
+  border-radius: 5px;
+}
+.markerPopup .leaflet-popup-content-wrapper .leaflet-popup-content{
+  background-color: transparent;
+  /* margin: 0; */
+}
